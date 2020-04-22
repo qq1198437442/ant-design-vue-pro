@@ -1,5 +1,5 @@
 <template>
-  <div class="header">Header</div>
+  <div>403</div>
 </template>
 
 <script>
@@ -11,8 +11,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.header {
-  float: right;
-}
-</style>
+<style scoped></style>

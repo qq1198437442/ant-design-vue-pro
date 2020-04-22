@@ -50,6 +50,10 @@ export default {
       console.log("radio checked", e.target.value);
     },
     handleSettingChange(type, value) {
+      // console.log(this.$router);
+      // console.log(this.$route);
+      // console.log(this.$router.push);
+      // console.log(typeof this.$route.query);
       this.$router.push({ query: { ...this.$route.query, [type]: value } });
     }
   }

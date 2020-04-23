@@ -7,7 +7,8 @@
 <script>
 import Chart from "../../components/Chart";
 // import random from "lodash/random";
-import axios from "axios";
+// import axios from "axios";
+import request from "../../utils/request";
 export default {
   components: {
     Chart
@@ -29,7 +30,11 @@ export default {
   },
   methods: {
     getChartData() {
-      axios.get("/api/dashboard/chart", { params: { ID: 12345 } }).then(res => {
+      request({
+        url: "/api/dashboard/chart",
+        method: "get",
+        params: { ID: 12345 }
+      }).then(res => {
         this.chartOption = {
           title: {
             text: "ECharts 入门示例"

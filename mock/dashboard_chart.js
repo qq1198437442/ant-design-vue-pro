@@ -1,4 +1,4 @@
-// import random from "lodash/random";
+// import { random } from "lodash/random";
 var random = require(`lodash/random`);
 
 function chart(method) {
@@ -12,6 +12,12 @@ function chart(method) {
         random(100),
         random(100),
         random(100)
+        /*         5,
+        20,
+        36,
+        10,
+        10,
+        20 */
       ];
       break;
     default:

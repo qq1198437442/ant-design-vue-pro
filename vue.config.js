@@ -13,9 +13,11 @@ module.exports = {
         target: "http://localhost:8080",
         bypass: function(req, res) {
           if (req.headers.accept.indexOf("html") !== -1) {
+            // console.log(req.headers.accept.indexOf("html"));
             console.log("Skipping proxy for browser request.");
             return "/index.html";
-          } else {
+            // return res.send([5, 20, 36, 10, 10, 20]);
+          } else if (process.env.MOCK !== "none") {
             const name = req.path
               .split("/api/")[1]
               .split("/")
@@ -23,7 +25,10 @@ module.exports = {
             const mock = require(`./mock/${name}`);
             const result = mock(req.method);
             delete require.cache[require.resolve(`./mock/${name}`)];
+            // console.log(result);
             return res.send(result);
+          } else {
+            return res.send([5, 20, 36, 10, 10, 20]);
           }
         }
       }

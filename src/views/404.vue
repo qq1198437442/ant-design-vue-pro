@@ -1,16 +1,20 @@
 <template>
-  <div>
-    <h1>404!页面找不到了！</h1>
+  <div style="text-align: center;">
+    <icon-font type="icon-icon-test" style="fontSize: 100px;"></icon-font>
+    <icon />
   </div>
 </template>
 
 <script>
+import icon from "@/assets/cc-head.svg";
 export default {
-  name: "",
+  components: {
+    icon
+  },
   data() {
     return {};
   }
 };
 </script>
 
-<style lang="" scoped></style>
+<style scoped></style>

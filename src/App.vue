@@ -7,5 +7,20 @@
     <router-view></router-view>
   </div>
 </template>
-
+<script>
+import moment from "moment";
+import "moment/locale/zh-cn";
+export default {
+  data() {
+    return {
+      locale: ""
+    };
+  },
+  watch: {
+    locale() {
+      console.log(moment);
+    }
+  }
+};
+</script>
 <style lang="less"></style>

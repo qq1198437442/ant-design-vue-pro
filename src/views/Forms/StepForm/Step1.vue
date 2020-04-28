@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import ReceiverAccount from "../../../components/ReceiverAccount";
+import ReceiverAccount from "@/components/ReceiverAccount";
 export default {
   components: {
     ReceiverAccount
